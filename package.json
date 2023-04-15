@@ -1,0 +1,23 @@
+{
+  "name": "a02-functions-meiqi-gu",
+  "version": "1.0.0",
+  "description": "A cmd line Node.js that ingests API data from Open-Meteo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a02-functions-meiqi-gu.git"
+  },
+  "keywords": [
+    "api",
+    "open-meteo"
+  ],
+  "author": "meiqi-gu",
+  "license": "SEE LICENSE IN <LICENSE>.",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a02-functions-meiqi-gu/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a02-functions-meiqi-gu#readme"
+}
