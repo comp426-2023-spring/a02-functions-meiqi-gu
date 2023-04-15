@@ -11,3 +11,7 @@ show_help() {
     printf -- "  -j\t\tEcho pretty JSON from open-meteo API and exit.\n"
     exit 0
 }
+
+const timezone = moment.tz.guess();
+const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latittude + '&longitude=-' + longitutde + '&daily=precipitation_hours&current_weather=true&timezone=America%2FNew_York'); 
+const data = await response.json(); 
