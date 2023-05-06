@@ -33,3 +33,11 @@ const data = await response.json();
 console.log(data); 
 const days = mini.d; 
 console.log(days); 
+
+if (days == 0) {
+  console.log("today.")
+} else if (days > 1) {
+  console.log("in " + days + " days.")
+} else {
+  console.log("tomorrow.")
+}
