@@ -18,8 +18,8 @@ if (mini.h) {
 }
 
 const timezone = mini.z || moment.tz.guess(); 
-const latitude = mini.n || (0-mini.s);
-const longitude = mini.e || (0-mini.w);
+const latitude = mini.n || (0-mini.s) || 35.875;
+const longitude = mini.e || (0-mini.w) || -79;
 
 
 const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude='+latitude+'&longitude='+longitude+'&daily=precipitation_hours&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone='+timezone);
