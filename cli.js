@@ -27,21 +27,13 @@ const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude='+
 
 const data = await response.json(); 
 if (mini.j) {
-
-  if (latitude > 90 || latitude < -90) {
-    console.log("Latitude must be in range"); 
-    process.exit(1); 
-  } else if (longitude > 180 || longitude < -180) {
-    console.log("Longtitude must be in range");
-    process.exit(1); 
-  } else {  
-    console.log(JSON.stringify(data)); 
+    console.log(data); 
     process.exit(0); 
-  }
   }
 
 const days = mini.d; 
 const weather = data.daily.precipitation_hours[days]; 
+const output = ""; 
 if (weather == 0) {
   console.log('You might need your galoshes '); 
 } else if (weather != 0) {
