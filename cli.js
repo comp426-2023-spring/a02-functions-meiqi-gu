@@ -27,14 +27,14 @@ const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude='+
 const data = await response.json(); 
 if (mini.j) {
   console.log(JSON.stringify(data)); 
-  process.exit(); 
+  process.exit(0); 
 }
 
 const days = mini.d; 
 const weather = data.daily.precipitation_hours[days]; 
 if (weather == 0) {
   console.log('You might need your galoshes '); 
-} else {
+} else if (weather != 0) {
   console.log('You will not need your galoshes '); 
 }
 
