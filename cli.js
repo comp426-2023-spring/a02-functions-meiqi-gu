@@ -30,14 +30,15 @@ if (mini.j) {
 
   if (latitude > 90 || latitude < -90) {
     console.log("Latitude must be in range"); 
+    process.exit(1); 
   } else if (longitude > 180 || longitude < -180) {
     console.log("Longtitude must be in range");
+    process.exit(1); 
   } else {  
     console.log(JSON.stringify(data)); 
+    process.exit(0); 
   }
-  
-  process.exit(0); 
-}
+  }
 
 const days = mini.d; 
 const weather = data.daily.precipitation_hours[days]; 
