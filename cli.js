@@ -28,9 +28,9 @@ const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude='+
 const data = await response.json(); 
 if (mini.j) {
 
-  if (latitude > 90) {
+  if (latitude > 90 || latitude < -90) {
     console.log("Latitude must be in range"); 
-  } else if (longitude < -90) {
+  } else if (longitude > 180 || longitude < -180) {
     console.log("Longtitude must be in range");
   } else {  
     console.log(JSON.stringify(data)); 
