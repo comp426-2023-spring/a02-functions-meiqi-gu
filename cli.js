@@ -17,11 +17,6 @@ if (mini.h) {
   process.exit(0); 
 }
 
-if (mini.j) {
-  console.log(data); 
-  process.exit(0); 
-}
-
 const timezone = mini.z || moment.tz.guess(); 
 const latitude = mini.n || (0-mini.s);
 const longitude = mini.e || (0-mini.w);
@@ -31,6 +26,11 @@ const longitude = mini.e || (0-mini.w);
 const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude='+latitude+'&longitude='+longitude+'&daily=precipitation_hours&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone='+timezone);
 
 const data = await response.json(); 
+
+if (mini.j) {
+  console.log(data); 
+  process.exit(0); 
+}
 
 const days = mini.d; 
 const weather = data.daily.precipitation_hours[days]; 
