@@ -18,8 +18,8 @@ if (mini.h) {
 }
 
 const timezone = mini.z || moment.tz.guess(); 
-const latitude = mini.n || (0-mini.s) || 35.875;
-const longitude = mini.e || (0-mini.w) || -79;
+const latitude = mini.n || (0-mini.s);
+const longitude = mini.e || (0-mini.w);
 
 
 
