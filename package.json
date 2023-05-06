@@ -2,8 +2,8 @@
   "name": "a02-functions-meiqi-gu",
   "version": "1.0.0",
   "description": "A cmd line Node.js that ingests API data from Open-Meteo.",
-  "main": "cli.js",
   "type": "module",
+  "main": "cli.js",
   "scripts": {
     "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
   },
