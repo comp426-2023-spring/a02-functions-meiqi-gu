@@ -26,6 +26,12 @@ const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude='+
 
 const data = await response.json(); 
 const days = mini.d; 
+const weather = data.daily.precipitation_hours[days]; 
+if (weather == 0) {
+  console.log('You might need your galoshes '); 
+} else {
+  console.log('You will not need your galoshes '); 
+}
 
 if (days == 0) {
   console.log("today.")
